@@ -154,19 +154,43 @@
             opacity: 0.8;
         }
 
-        /* Media query for mobile responsiveness */
+        /* Updated media query for better mobile responsiveness */
         @media (max-width: 768px) {
+            .header {
+                padding: 24px 0;  /* Adjusted padding for mobile */
+            }
+
+            .game-title {
+                font-size: 2em;  /* Slightly smaller title on mobile */
+                padding: 0 16px;  /* Add side padding */
+            }
+
             .hero-section {
                 flex-direction: column;
                 text-align: center;
+                padding: 24px 16px;  /* Adjusted padding */
+                gap: 24px;  /* Reduced gap for mobile */
+            }
+
+            .hero-icon {
+                width: 140px;  /* Slightly smaller icon on mobile */
+                height: 140px;
             }
 
             .hero-content {
                 text-align: center;
             }
 
+            .game-description {
+                font-size: 1.2em;  /* Slightly smaller text on mobile */
+                margin-bottom: 20px;
+            }
+
             .store-buttons {
                 justify-content: center;
+                flex-wrap: wrap;  /* Allow buttons to wrap on very small screens */
+                gap: 16px;
+                margin: 24px 0;
             }
 
             .header-store-buttons {
@@ -177,6 +201,44 @@
             .store-badge.google-play,
             .store-badge.app-store {
                 height: 48px;
+            }
+
+            .support-links {
+                flex-direction: column;  /* Stack buttons on mobile */
+                align-items: center;
+                gap: 16px;
+            }
+
+            .privacy-button {
+                width: 80%;  /* Make buttons wider on mobile */
+                max-width: 300px;
+            }
+
+            .footer {
+                padding: 24px 16px;  /* Adjusted footer padding */
+                margin-top: 24px;
+            }
+
+            .container {
+                padding: 16px;  /* Consistent padding */
+            }
+        }
+
+        /* Additional media query for very small screens */
+        @media (max-width: 350px) {
+            .game-title {
+                font-size: 1.8em;
+            }
+
+            .hero-icon {
+                width: 120px;
+                height: 120px;
+            }
+
+            .store-badge,
+            .store-badge.google-play,
+            .store-badge.app-store {
+                height: 44px;
             }
         }
     </style>
